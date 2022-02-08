@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.train-carriage {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carriage-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.train-seat {
+  width: 5rem;
+  height: 5rem;
+}
+
+.train-seat__seat {
+  stroke: black;
+  stroke-width: 2;
+}
+
+.train-seat__seat--occupied {
+  fill: lightgray;
+}
+
+.train-seat__seat--free {
+  fill: olive;
+}
+
+.train-seat__seat--selected {
+  fill: orange;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.train-seat__number {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aisle-spacer {
+  width: 5rem;
+  height: 5rem;
 }
